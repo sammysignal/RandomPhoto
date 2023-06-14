@@ -16,6 +16,7 @@
 		95A787F02A368C4800303389 /* RandomPhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A787EF2A368C4800303389 /* RandomPhotoTests.swift */; };
 		95A787FA2A368C4800303389 /* RandomPhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A787F92A368C4800303389 /* RandomPhotoUITests.swift */; };
 		95A787FC2A368C4800303389 /* RandomPhotoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A787FB2A368C4800303389 /* RandomPhotoUITestsLaunchTests.swift */; };
+		95BA2B0F2A3A176900A2233D /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BA2B0E2A3A176900A2233D /* SavedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		95A787F52A368C4800303389 /* RandomPhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomPhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A787F92A368C4800303389 /* RandomPhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhotoUITests.swift; sourceTree = "<group>"; };
 		95A787FB2A368C4800303389 /* RandomPhotoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhotoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		95BA2B0E2A3A176900A2233D /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				95A787DA2A368C4700303389 /* SceneDelegate.swift */,
 				95A787DC2A368C4700303389 /* ViewController.swift */,
 				95A787DE2A368C4700303389 /* Main.storyboard */,
+				95BA2B0E2A3A176900A2233D /* SavedViewController.swift */,
 				95A787E12A368C4800303389 /* Assets.xcassets */,
 				95A787E32A368C4800303389 /* LaunchScreen.storyboard */,
 				95A787E62A368C4800303389 /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				95A787DD2A368C4700303389 /* ViewController.swift in Sources */,
 				95A787D92A368C4700303389 /* AppDelegate.swift in Sources */,
+				95BA2B0F2A3A176900A2233D /* SavedViewController.swift in Sources */,
 				95A787DB2A368C4700303389 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QVYSP49AD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RandomPhoto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QVYSP49AD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RandomPhoto/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
