@@ -5,25 +5,37 @@
 //  Created by Sammy Mehra on 6/14/23.
 //
 
+import Foundation
 import UIKit
 
+
 class SavedViewController: UIViewController {
+    
+    private let imageViews : [UIImageView] = []
+    
+    public var savedUrls: [String] = [];
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .systemRed;
+        
+        // instantiate image views
+        for i in 0...savedUrls.count-1 {
+            let savedUrl: String = savedUrls[i]
 
-        // Do any additional setup after loading the view.
+            let imageView : UIImageView = {
+                let imageView = UIImageView()
+                imageView.contentMode = .scaleAspectFill;
+                imageView.backgroundColor = .white;
+                return imageView;
+            }()
+            
+        }
+
+        
+
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+

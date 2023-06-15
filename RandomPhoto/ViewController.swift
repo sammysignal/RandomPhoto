@@ -36,6 +36,15 @@ class ViewController: UIViewController {
         return saveButton
     }()
     
+    private let viewSavedButton : UIButton = {
+        let viewSavedButton = UIButton()
+        viewSavedButton.backgroundColor = .white
+        viewSavedButton.setTitle("Gallery", for: .normal)
+        viewSavedButton.setTitleColor(.black, for: .normal)
+        viewSavedButton.setTitleColor(.lightGray, for: .disabled)
+        return viewSavedButton
+    }()
+    
     let colors : [UIColor] = [
         .systemBlue,
         .systemPink,
@@ -63,11 +72,13 @@ class ViewController: UIViewController {
     
         view.addSubview(button)
         view.addSubview(saveButton)
+        view.addSubview(viewSavedButton)
         
         displayRandomCat()
         
         button.addTarget(self, action: #selector(didTapButton), for:.touchUpInside)
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for:.touchUpInside)
+        viewSavedButton.addTarget(self, action: #selector(didTapViewSavedButton), for:.touchUpInside)
     }
     
     @objc func didTapButton(){
@@ -80,6 +91,26 @@ class ViewController: UIViewController {
         urlArray.append(activePhotoUrlString)
         defaults.set(urlArray, forKey: SAVED);
         print(urlArray)
+        
+        // display alert
+        // Create new Alert
+        let dialogMessage = UIAlertController(title: "Saved", message: "Photo Saved", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button tapped")
+         })
+        
+        //Add OK button to a dialog message
+        dialogMessage.addAction(ok)
+        // Present Alert to
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    @objc func didTapViewSavedButton(){
+        let vc = SavedViewController()
+        vc.savedUrls = defaults.stringArray(forKey: SAVED)!
+        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -87,6 +118,8 @@ class ViewController: UIViewController {
         button.frame = CGRect(x: 30, y: view.frame.size.height-150-view.safeAreaInsets.bottom, width: view.frame.size.width-60, height: 55)
         
         saveButton.frame = CGRect(x: 75, y: view.frame.size.height-70-view.safeAreaInsets.bottom, width: view.frame.size.width-150, height: 45)
+        
+        viewSavedButton.frame = CGRect(x: view.frame.size.width-100, y: 100+view.safeAreaInsets.bottom, width: 50, height: 45)
     }
 
     func displayRandomCat() {
